@@ -1,7 +1,7 @@
 <template>
   <div class="panel">
     <div class="header">
-      <h2 style="color: white;">Recommended Files</h2>
+      <h2 style="color: rgb(70, 70, 70);">{{title}}</h2>
     </div>
     <div class="content">
       <ul style="margin: 0 !important">
@@ -11,7 +11,7 @@
           :key="file.name"
           v-tooltip="file.path"
         >
-          <filecard />
+          <filecard :file="file.name" :img="file.image"/>
         </li>
       </ul>
     </div>

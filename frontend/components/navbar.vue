@@ -1,94 +1,44 @@
 <template>
   <header>
-    <div class="left">
-      <ul class="apps">
-        <li>
-          <a>Dashboard</a>
-          <a>Dashboard</a>
-          <a>Dashboard</a>
-        </li>
-      </ul>
-    </div>
-    <div class="right"></div>
+    <nuxt-link to="/"><home-icon class="icon" size="1.5x" v-tooltip.right="'Home'"/></nuxt-link>
+    <nuxt-link to="/files"><folder-icon class="icon" size="1.5x" v-tooltip.right="'Files'"/></nuxt-link>
+    <message-square-icon class="icon" size="1.5x" v-tooltip.right="'Chat'"/>
+    <activity-icon class="icon" size="1.5x" v-tooltip.right="'Activity'"/>
   </header>
 </template>
 
 <script>
-import { HomeIcon, FolderIcon } from "vue-feather-icons";
+import { HomeIcon, FolderIcon, MessageSquareIcon, ActivityIcon } from "vue-feather-icons";
 export default {
-  components: { HomeIcon, FolderIcon },
+  components: { HomeIcon, FolderIcon, MessageSquareIcon, ActivityIcon },
 };
 </script>
 
 <style lang="scss" scoped>
-.apps {
-  display: inline-flex;
-  min-width: 50px;
-  z-index: 2;
-  list-style: none;
-  float: left;
-  & li {
-    position: relative;
-    cursor: pointer;
-    padding: 0 2px;
-    display: flex;
-    justify-content: center;
-    &a {
-        color: white;
-        margin-left: 10px;
-    }
-  }
-}
-.bernercloud {
-  padding: 7px 0;
-  padding-left: 0px;
-  padding-left: 86px;
-  position: relative;
-  height: 100%;
-  box-sizing: border-box;
-  opacity: 1;
-  align-items: center;
-  display: flex;
-  flex-wrap: wrap;
-  overflow: hidden;
-  float: left;
-}
-.logo {
-  display: inline-flex;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-  width: 62px;
-  position: absolute;
-  left: 12px;
-  top: 1px;
-  bottom: 1px;
-}
+
 header {
-  display: inline-flex;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  z-index: 2000;
-  height: 50px;
-  justify-content: space-between;
-  box-sizing: border-box;
+  position: absolute;
+  background-color: rgba(240, 233, 233, 0.582);
+  width: 50px;
+  height: 200px;
+  z-index: 10000000;
+  top: 50%;
+  left: 2.5%;
+  transform: translate(-50%, -50%);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
 }
-
-.right {
-  justify-content: flex-end;
-  align-items: center;
-}
-
-.left {
-  flex: 0 1;
-  white-space: nowrap;
-  min-width: none;
-}
-
 .icon {
+  z-index: inherit;
+  position: relative;
+  left: 50%;
+  margin-top: 25px;
+  transform: translate(-50%, -50%);
+  stroke: rgba(70, 70, 70, 0.733);
+  cursor:pointer;
     &:hover {
-        stroke: #fff
+        stroke: rgba(70, 70, 70, 0.9);
     }
 }
 

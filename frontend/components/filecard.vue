@@ -2,18 +2,19 @@
   <div class="ct">
     <div
       class="thumbnail"
-      style="
-        background-image: url('https://images.unsplash.com/photo-1553856622-d1b352e9a211');
+      :style="{backgroundImage: `url(${img})`}
       "
     />
     <div class="details">
-      <span>river.png</span>
+      <span>{{file}}</span>
     </div>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  props: ["file", "img"]
+};
 </script>
 
 <style lang="scss" scoped>
@@ -46,6 +47,8 @@ export default {};
     height: 44px;
     text-align: right;
     float: left;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 }
 </style>

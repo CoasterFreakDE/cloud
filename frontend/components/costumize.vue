@@ -9,8 +9,28 @@
     :width="900"
     class="costumize-modal"
   >
-    <h1 style="text-align: center">Costumize your dashboard</h1>
-    <h2>Change your background</h2>
+    <h1
+      style="
+        text-align: center;
+        font-size: 28px;
+        font-weigth: 600;
+        margin-bottom: 10px;
+        margin-top: 5px;
+        font-family: 'Work Sans', sans-serif;
+      "
+    >
+      Costumize your dashboard
+    </h1>
+    <h2
+      style="
+        text-align: center;
+        font-size: 18px;
+        font-weigth: 500;
+        font-family: 'Work Sans', sans-serif;
+      "
+    >
+      Change your background
+    </h2>
     <div class="backgrounds">
       <button
         v-for="image in images"
@@ -22,7 +42,10 @@
         @click="setBg"
       ></button>
     </div>
-    <p style="text-align: center;">All featured images are from <a href="unsplash.com">Unsplash</a> and therefore royalty-free. </p>
+    <p style="text-align: center">
+      All featured images are from <a href="unsplash.com">Unsplash</a> and
+      therefore royalty-free.
+    </p>
   </modal>
 </template>
 
@@ -40,14 +63,14 @@ export default {
         this.images.push({ pathLong: r(key), pathShort: key })
       );
     },
-    setBg(event){
+    setBg(event) {
       let button = event.target;
-      let bg = button.style.backgroundImage.slice(5, -2)
-      this.$emit("bg-change", bg)
-    }
+      let bg = button.style.backgroundImage.slice(5, -2);
+      this.$emit("bg-change", bg);
+    },
   },
   beforeMount() {
-    this.importAll(require.context("../assets/images/", true, /\.jpg$/));
+    this.importAll(require.context("../assets/images/", true, /^.*\.(jpg|png)$/));
   },
 };
 </script>

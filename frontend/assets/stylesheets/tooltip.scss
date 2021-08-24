@@ -3,7 +3,7 @@
   z-index: 10000;
 
   .tooltip-inner {
-    background: white;
+    background: rgba(255, 255, 255, 0.9);
     color: grey;
     border-radius: 2px;
     padding: 7px 20px 5px;
@@ -15,7 +15,7 @@
     border-style: solid;
     position: absolute;
     margin: 5px;
-    border-color: white;
+    border-color: rgba(255, 255, 255, 0.9);
     z-index: 1;
   }
 

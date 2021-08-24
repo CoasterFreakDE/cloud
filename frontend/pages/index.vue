@@ -1,6 +1,10 @@
 <template>
   <div>
-    <modal @bg-change="setBg"/>
+    <modal v-show="modal"  :height="'600px'" :width="'900px'" @close-modal="toggleModal">
+      <p>Test</p>
+      <images @bg-change="setBg" />
+    </modal>
+    <button @click="toggleModal"></button>
     <div class="dashboard" id="dash">
       <h2 class="greeting">{{ greeting }}, {{ name }}</h2>
       <!--<status/>-->
@@ -22,26 +26,34 @@
             },
           ]"
         />
+        
       </div>
+      <clock @costumize="toggleModal"/>
       <div class="footer">
-        <button class="costumize-btn" @click="toggleModal">Customize</button>
+        <p style="color: rgb(70,70,70);"></p>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import Modal from '~/components/costumize.vue';
+import Modal from '~/components/modal.vue';
 /*import Status from "~/components/status.vue"*/
 import Panel from "~/components/panel.vue";
+import Navbar from "~/components/navbar.vue"
+import Clock from '~/components/clock.vue';
+import Images from "~/components/costumize/images.vue"
 export default {
-  components: { /*Status*/ Panel, Modal },
+  components: { /*Status*/ Panel, Modal, Navbar, Clock, Images },
   data() {
     return {
       name: "Leo",
       greeting: "",
       modal: false,
     };
+  },
+  mounted(){
+    this.getBg()
   },
   beforeMount() {
     this.getGreeting();
@@ -66,46 +78,46 @@ export default {
       this.greeting = greeting;
     },
     toggleModal() {
-      this.$modal.show("costumize")
+      console.log(this.modal)
+      this.modal = !this.modal
+      console.log(this.modal)
+    },
+    getBg() {
+      let bg = window.localStorage.getItem("bg")
+      console.log(bg)
+      if (bg === undefined) bg = "/_nuxt/assets/images/tessst.png"
+      let dashboard = document.getElementById("dash")
+      dashboard.style.backgroundImage = `url(${bg})`
     },
     setBg(bg){
       let dashboard = document.getElementById("dash")
       dashboard.style.backgroundImage = `url(${bg})`
+      window.localStorage.setItem("bg", bg)
     }
   },
 };
 </script>
 <style lang="scss" scoped>
-.greeting {
-  color: white;
-  text-align: center;
-  font-size: 32px;
-  font-weight: 600;
-  line-height: 130%;
-  padding: 10vh 16px 0px;
-}
-
 .dashboard {
-  background-image: url("~assets/images/marek-piwnicki-XdWNaNuEOj4-unsplash.jpg");
-  width: 100%;
-  min-height: 100vh;
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-color: white;
-  --color-background-translucent: rgba(255, 255, 255, 0.8);
-  --background-blur: blur(10px);
-}
+        width: 100%;
+        min-height: 100vh;
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-color: white;
+        --color-background-translucent: rgba(255, 255, 255, 0.8);
+        --background-blur: blur(10px);
+    }
 
-.costumize-btn {
-  text-align: center;
-  background-color: rgba(240, 233, 233, 0.582);
-  color: white;
-  width: 100px;
-  height: 40px;
-  border-radius: 10px;
-}
+.greeting {
+        color: white;
+        text-align: center;
+        font-size: 32px;
+        font-weight: 600;
+        line-height: 130%;
+        padding: 10vh 16px 0px;
+    }
 
 .footer {
   display: flex;
