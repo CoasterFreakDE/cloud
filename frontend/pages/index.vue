@@ -37,12 +37,12 @@
 </template>
 
 <script>
-import Modal from '~/components/modal.vue';
+import Modal from '~/components/global/modal.vue';
 /*import Status from "~/components/status.vue"*/
-import Panel from "~/components/panel.vue";
-import Navbar from "~/components/navbar.vue"
-import Clock from '~/components/clock.vue';
-import Images from "~/components/costumize/images.vue"
+import Panel from "~/components/dashboard/panel.vue";
+import Navbar from "~/components/global/navbar.vue"
+import Clock from '~/components/global/control.vue';
+import Images from "~/components/dashboard/images.vue"
 export default {
   components: { /*Status*/ Panel, Modal, Navbar, Clock, Images },
   data() {

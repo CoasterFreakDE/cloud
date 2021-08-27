@@ -5,3 +5,13 @@
 .v--model {
     background-color: rgba(255, 255, 255, 0.082) !important;
 }
+
+.nuxt-link-exact-active {
+    background-color: rgba(240, 233, 233, 0.582);
+    border-radius: 19px;
+}
+
+* {
+    outline: none !important;
+}
+

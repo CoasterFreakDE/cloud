@@ -70,7 +70,7 @@ export default {
     },
   },
   beforeMount() {
-    this.importAll(require.context("../assets/images/", true, /^.*\.(jpg|png)$/));
+    this.importAll(require.context("../../assets/images", true, /^.*\.(jpg|png)$/));
   },
 };
 </script>

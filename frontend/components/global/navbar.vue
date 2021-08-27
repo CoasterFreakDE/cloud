@@ -19,6 +19,7 @@ export default {
 header {
   position: absolute;
   background-color: rgba(240, 233, 233, 0.582);
+  backdrop-filter: blur(5px);
   width: 50px;
   height: 200px;
   z-index: 10000000;
@@ -35,10 +36,11 @@ header {
   left: 50%;
   margin-top: 25px;
   transform: translate(-50%, -50%);
-  stroke: rgba(70, 70, 70, 0.733);
+  stroke: rgba(56, 56, 56, 0.733);
   cursor:pointer;
+
     &:hover {
-        stroke: rgba(70, 70, 70, 0.9);
+        stroke: rgba(58, 58, 58, 0.9);
     }
 }
 

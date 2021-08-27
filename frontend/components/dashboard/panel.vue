@@ -28,6 +28,7 @@ export default {
 .panel {
   width: 320px;
   max-width: 100%;
+  backdrop-filter: blur(5px);
   background-color: rgba(240, 233, 233, 0.582);
   //opacity: 0.6;
   margin: 16px;

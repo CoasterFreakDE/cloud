@@ -60,6 +60,7 @@ export default {
   top: 2%;
   .clock {
     background: rgba(240, 233, 233, 0.582);
+    backdrop-filter: blur(5px);
     height: 40px;
     width: 60px;
     border-radius: 15px;
@@ -83,11 +84,13 @@ export default {
       margin-left: 10px;
       cursor: pointer;
       z-index:inherit;
+      backdrop-filter: blur(5px);
       background-color:rgba(240, 233, 233, 0.582);
   }
   .icon-bg {
     position: relative;
     background: rgba(240, 233, 233, 0.582);
+    backdrop-filter: blur(5px);
       width: 40px;
       height: 40px;
       border-radius: 100%;
