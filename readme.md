@@ -14,7 +14,7 @@ Your data, on cloud 9.
 - 😉 **We do not collect any data from you.**
 ## Is there a destination?
 
-My goal is to make sure that anyone who wants to set up their own cloud instance doesn't have that path filled with rocks. This project is undoubtedly a mammoth task. However, regular updates are planned for both the user interface, the user experience, and most importantly, security. Also, not to be neglected is the approach that there will be no paywall. Everything will be completely free and without any opaque structures.
+My goal is to make sure that anyone who wants to set up their own cloud instance doesn't have that path filled with rocks. This project is undoubtedly a mammoth task. However, regular updates are planned for both the user interface, the user experience, and most importantly, security. 
 
 ## About inspiration, motivation and more
 The inspiration, as mentioned above, was drawn mainly from the poor implementations of the alternatives.
