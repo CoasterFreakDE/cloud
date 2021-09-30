@@ -24,7 +24,7 @@ export default {
   methods: {
     getBg() {
       let bg = window.localStorage.getItem("bg");
-      if (bg === undefined) bg = "/_nuxt/assets/images/tessst.png";
+      if (!bg) bg = "/_nuxt/assets/images/tessst.png";
       let explorer = document.getElementById("exp");
       explorer.style.backgroundImage = `url(${bg})`;
     },

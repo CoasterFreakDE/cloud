@@ -85,7 +85,7 @@ export default {
     getBg() {
       let bg = window.localStorage.getItem("bg")
       console.log(bg)
-      if (bg === undefined) bg = "/_nuxt/assets/images/tessst.png"
+      if (!bg) bg = "/_nuxt/assets/images/tessst.png"
       let dashboard = document.getElementById("dash")
       dashboard.style.backgroundImage = `url(${bg})`
     },

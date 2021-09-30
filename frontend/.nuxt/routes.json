@@ -1,0 +1,16 @@
+[
+  {
+    "name": "files",
+    "path": "/files",
+    "component": "F:\\\\Dokumente\\\\Projects\\\\Node\\\\Web\\\\vuejs\\\\cloud\\\\frontend\\\\pages\\\\files.vue",
+    "chunkName": "pages/files",
+    "_name": "_dba0cc9a"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "F:\\\\Dokumente\\\\Projects\\\\Node\\\\Web\\\\vuejs\\\\cloud\\\\frontend\\\\pages\\\\index.vue",
+    "chunkName": "pages/index",
+    "_name": "_a1113ae4"
+  }
+]

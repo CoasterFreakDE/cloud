@@ -1,0 +1,38 @@
+{
+  "Control": {
+    "description": "Auto imported from components/global/control.vue"
+  },
+  "Modal": {
+    "description": "Auto imported from components/global/modal.vue"
+  },
+  "Navbar": {
+    "description": "Auto imported from components/global/navbar.vue"
+  },
+  "DashboardCostumize": {
+    "description": "Auto imported from components/dashboard/costumize.vue"
+  },
+  "DashboardFilecard": {
+    "description": "Auto imported from components/dashboard/filecard.vue"
+  },
+  "DashboardImages": {
+    "description": "Auto imported from components/dashboard/images.vue"
+  },
+  "DashboardPanel": {
+    "description": "Auto imported from components/dashboard/panel.vue"
+  },
+  "DashboardStatus": {
+    "description": "Auto imported from components/dashboard/status.vue"
+  },
+  "ExplorerBreadcrumbs": {
+    "description": "Auto imported from components/explorer/breadcrumbs.vue"
+  },
+  "ExplorerFile": {
+    "description": "Auto imported from components/explorer/file.vue"
+  },
+  "ExplorerFiles": {
+    "description": "Auto imported from components/explorer/files.vue"
+  },
+  "ExplorerPreview": {
+    "description": "Auto imported from components/explorer/preview.vue"
+  }
+}
